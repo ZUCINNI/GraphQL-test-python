@@ -40,6 +40,9 @@ INSTALLED_APPS = [
 
     # Install the ingredients app
     'cookbook.ingredients',
+    # This will also make the `graphql_schema` management command available
+    'graphene_django',
+    'django_filters',
 ]
 
 MIDDLEWARE = [
@@ -71,6 +74,11 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'cookbook.wsgi.application'
+
+
+GRAPHENE = {
+    'SCHEMA': 'cookbook.schema.schema'
+}
 
 
 # Database
